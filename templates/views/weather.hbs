@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- navbar -->
+    {{>nav}}
+
+    <!-- content -->
+    <div class="container-fluid content">
+        <div class="row">
+            <div class="col-md-6 col-12 mx-auto weather_left">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/weather.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6 col-12 mx-auto weather_right">
+                <div class="weather_header">
+                    <form class="search">
+                        <input type="text" id="city" placeholder="City name..." autocomplete="off">
+                        <input type="submit" value="search" id="submit_btn">
+                    </form>
+                </div>
+                <div class="weather_info">
+                    <div class="info_header">
+                        <p id="day_date"></p>
+                        <p id="time"></p>
+                    </div>
+
+                    <div class="info_content">
+                        <div style="display: flex; justify-content:space-between">
+                        <p id="city_name"></p>
+                            <p id="weather_status"></p>
+                        </div>
+                        <div class="info_temp">
+                            <p id="temp"></p>
+                        </div>
+
+                        <div class="weather_additional">
+                            <p id="visibility_wind"></p>
+                            <p id="sun_set_rise"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    {{>footer}}
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script> -->
+    <script src="js/weather.js"></script>
+</body>
+
+</html>

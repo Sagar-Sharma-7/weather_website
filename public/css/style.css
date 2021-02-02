@@ -1,0 +1,421 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Patrick Hand', cursive; */
+  font-family: "Piazzolla", serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+/* header */
+#navbar {
+  background-color: #151515;
+}
+.navbar {
+  color: #fff !important;
+  background-color: #151515 !important;
+  padding: 1rem 0;
+}
+.navbar li {
+  margin-left: 2rem;
+}
+a:hover {
+  color: #fff;
+}
+.navbar-brand {
+  color: #00e4c9;
+}
+.nav-link {
+  color: #00e4c9;
+  font-size: 1.8rem;
+}
+
+.navbar-toggler {
+  background-color: #00e4c9;
+  color: #151515;
+}
+.navbar-toggler-icon {
+  color: #fff;
+}
+
+#weather_img {
+  animation: icon 15s infinite;
+  animation-delay: 2s;
+}
+@keyframes icon {
+  50% {
+    transform: rotate(720deg);
+  }
+}
+
+/* content */
+.content_left {
+  height: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.content_left p {
+  font-size: 2rem;
+}
+
+.content_left h1 {
+  font-size: 4rem;
+  margin: 1rem 0 4rem 0;
+}
+
+.content_right {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.content_left span {
+  color: #00e4c9;
+  font-size: 5rem;
+}
+
+.content_left button {
+  border: none;
+  outline: none;
+  padding: 1.5rem;
+  border-radius: 2.7rem;
+  background-color: #00e4c9;
+  color: #fff;
+  box-shadow: 0px 1px 1px #000;
+  transition: 1s;
+}
+
+.content_left button:hover {
+  background-color: #151515;
+}
+
+.skills_box {
+  display: none;
+}
+
+.skills_right {
+  padding: 5rem;
+}
+
+.skills_right h1 {
+  text-align: center;
+}
+
+.progress {
+  height: 1.2rem;
+  font-size: 1rem;
+  margin: -1rem 0;
+}
+.progress1 {
+  background-color: #fe725b;
+  animation: progress1 10s 1;
+  animation-fill-mode: forwards;
+}
+.progress2 {
+  background-color: #2965f1;
+  animation: progress2 10s 1;
+  animation-fill-mode: forwards;
+}
+.progress3 {
+  background-color: #f0db4f;
+  animation: progress3 10s 1;
+  animation-fill-mode: forwards;
+}
+.progress4 {
+  background-color: #054875;
+  animation: progress4 10s 1;
+  animation-fill-mode: forwards;
+}
+.progress5 {
+  background-color: #3c873a;
+  animation: progress5 10s 1;
+  animation-fill-mode: forwards;
+}
+.progress6 {
+  background-color: #151515;
+  animation: progress6 10s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes progress1 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 75%;
+  }
+}
+
+@keyframes progress2 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 65%;
+  }
+}
+
+@keyframes progress3 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes progress4 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes progress5 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+@keyframes progress6 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 65%;
+  }
+}
+
+.home {
+  width: 100%;
+}
+
+/* weather  report*/
+.weather_left{
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.weather_right{
+  height: 50rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+input[type="text"] { /*#city*/
+  width: 13rem;
+  height: 6rem;
+  padding-right: 5rem;
+  border-radius: 5rem;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  transition: 1s;
+  color: #fff;
+  caret-color: #00e4c9;
+  background-color: #151515;
+  padding-left: 2rem;
+  animation: city 5s 1;
+  animation-fill-mode: forwards;
+}
+
+input[type="submit"] {/*#submit_btn*/
+  margin-left: -5rem;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 5rem;
+  outline: none;
+  border: none;
+  transition: 3s;
+  /* background-color: #00e4c9; */
+  animation: submit 5s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes city{
+  to{
+    width: 30rem;
+  }
+}
+
+@keyframes submit{
+  to{
+    transform: rotateZ(750deg);
+    background-color: #00e4c9;
+  }
+}
+
+/* form:active > #city{
+  width: 30rem;
+  caret-color: #00e4c9;
+  color: #00e4c9;
+} */
+/* #city:hover{
+  width: 30rem;
+}
+ #city:hover  +  #submit_btn{
+  background-color: #00e4c9;
+  transform: rotateZ(750deg);
+} */
+/* weather result box */
+.weather_info{
+  width: 35rem;
+  background-color: #fff;
+  border-radius: 3rem;
+  padding: 2rem;
+  box-shadow: inset 5px 5px 9px #f5f5f5,
+            inset -5px -5px 9px #ffffff;
+}
+
+.info_header{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  border-bottom: 1px solid #151515;
+}
+
+#day_date, #time{
+  font-size: 1.2rem;
+}
+
+#time{
+  animation: time 1s infinite;
+}
+
+@keyframes time{
+  to{
+    transform: rotateX(0deg);
+  }
+  from{
+    transform: rotateX(360deg);
+  }
+}
+
+.info_content{
+  font-size: 2rem;
+}
+
+.info_content > .info_temp{
+  font-size: 4rem;
+  text-align: center;
+}
+
+/* icon */
+.fa-smog{
+  color: #4A4D52;
+}
+.fa-sun{
+  color: gold;
+}
+.mist{
+  color: lightblue;
+}
+.fa-cloud{
+ color: #d9edff;
+}
+.fa-water{
+  color: #b1b1b1;
+}
+.fa-circle{
+  color: gold;
+}
+.fa-snowflake{
+  color: #81a7ff;
+}
+.fa-cloud-showers-heavy{
+  color: #4e83ff;
+}
+.fog{
+  color: #d5eeff;
+}
+
+
+.weather_additional{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+
+
+/* footer */
+
+footer {
+  width: 100%;
+  background-color: #151515;
+  margin-top: auto;
+}
+footer p {
+  margin: 0;
+  text-align: center;
+  color: #00e4c9;
+  line-height: 3rem;
+  font-size: 1.4rem;
+}
+
+/* scroll bar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00e4c9;
+  border-radius: 5rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* media query */
+@media screen and (max-width: 768px) {
+  ::-webkit-scrollbar {
+    display: block;
+  }
+  .content_left {
+    height: auto;
+    margin: 5px 0;
+  }
+  .content_right {
+    height: auto;
+    margin-top: 3px;
+  }
+}

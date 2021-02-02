@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+</head>
+<body>
+
+  <!-- navbar -->
+   {{>nav}}
+
+    <!-- content -->
+    <div class="container-fluid content">
+      <div class="row">
+          <div class="col-md-10 col-12 mx-auto">
+            <div class="row">
+                <!-- left side content -->
+                <div class="col-md-6 col-12 content_left animate__animated animate__zoomIn">
+                  <p>Welcome to my website</p>
+                  <h1>I am a  <span>Front End </span>Web Developer</h1>
+                  <a href="#skills"><button class="btn_skills">My Skills</button></a>
+                </div>
+                <!-- right side content -->
+                <div class="col-md-6 col-12 content_right">
+                  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="images/bg3.jpg" class="w-100" alt="..." id="image1">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+      </div>
+
+      <!-- skills -->
+      <div class="row skills_box">
+        <div class="col-md-10 col-12 mx-auto">
+          <div class="row">
+              <!-- right -->
+              <div class="col-md-6 content_right animate__animated animate__bounceInLeft">
+                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="https://image.freepik.com/free-vector/code-typing-concept-illustration_114360-3866.jpg" class="w-100" alt="..." id="image1">
+                      </div>
+                    </div>
+                  </div>
+            </div>
+              <!-- left -->
+              <div class="col-md-6 skills_right animate__animated animate__bounceInLeft">
+                <a name="skills"></a>
+                  <h1>MY SKILLS</h1>
+                  <p>HTML</p>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated progress1" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                  </div>
+                  <br>
+                  <p>CSS</p>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated progress2" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
+                  </div>
+                  <br>
+                  <p>JavaScript</p>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated progress3" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+                  </div>
+                  <br>
+                  <p>jQuery</p>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated progress4" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+                  </div>
+                  <br>
+                  <p>Node js</p>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated progress5" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                  </div>
+                  <br>
+                  <p>Express js</p>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated progress6" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
+                  </div>
+              </div>
+
+
+          </div>
+        </div>
+     </div>
+    </div>
+
+   
+
+    <!-- footer -->
+   {{>footer}}
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script> -->
+    <script src="js/main.js"></script>
+</body>
+</html>

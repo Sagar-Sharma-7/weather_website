@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@1,500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Patrick Hand', cursive; */
+    font-family: 'Piazzolla', serif;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* header */
+#navbar{
+    background-color: #151515;
+}
+.navbar{
+    color: #fff !important;
+    background-color: #151515 !important;
+    padding: 1rem 0;
+}
+.navbar li{
+    margin-left: 2rem;
+}
+a:hover{
+    color: #fff;
+}
+.navbar-brand{
+    color: #00e4c9;
+}
+.nav-link{
+    color: #00e4c9;
+    font-size: 1.8rem;
+}
+
+.navbar-toggler{
+    background-color: #00e4c9;
+    color: #151515;
+}
+.navbar-toggler-icon{
+    color: #fff;
+}
+
+
+
+#weather_img{
+    animation: icon 15s infinite;
+    animation-delay: 2s;
+}
+@keyframes icon {
+    50%  {
+        transform: rotate(720deg);
+    }
+}
+
+
+/* content */
+.content_left{
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.content_left p {
+    font-size: 2rem;
+}
+
+.content_left h1 {
+    font-size: 4rem;
+    margin:  1rem 0 4rem 0;
+}
+
+.content_right{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.content_left span{
+    color: #00e4c9;
+    font-size: 5rem;
+}
+
+.content_left button {
+    border: none;
+    outline: none;
+    padding: 1.5rem;
+    border-radius: 2.7rem;
+    background-color: #00e4c9;
+    color: #fff;
+    box-shadow: 0px 1px 1px #000;
+    transition: 1s;
+}
+
+.content_left button:hover{
+    background-color: #151515;
+}
+
+.skills_box{
+    display: none;
+}
+
+.skills_right{
+    padding: 5rem;
+}
+
+.skills_right h1{
+    text-align: center;
+}
+
+.progress{
+    height: 1.2rem;
+    font-size: 1rem;
+    margin: -1rem 0;
+}
+.progress1{
+    background-color: #fe725b;
+}
+.progress2{
+    background-color: #2965f1;
+}
+.progress3{
+    background-color: #f0db4f;
+}
+.progress4{
+    background-color: #054875;
+}
+.progress5{
+    background-color: #3c873a;
+}
+.progress6{
+    background-color: #151515;
+}
+
+.home{
+    width: 100%;
+}
+
+
+/* footer */
+
+footer{
+    width: 100%;
+    background-color: #151515;
+    margin-top: auto;
+}
+footer p{
+    margin: 0;
+    text-align: center;
+    color: #00e4c9;
+    line-height:3rem;
+    font-size: 1.4rem;
+}
+
+
+/* scroll bar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    display: none;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #000; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #00e4c9; 
+    border-radius: 5rem;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  /* media query */
+  @media screen and (max-width : 768px){
+      ::-webkit-scrollbar{
+          display: block;
+      }
+      .content_left{
+          height: auto;
+          margin: 5px 0;
+      }
+      .content_right{
+          height: auto;
+          margin-top: 3px;
+      }
+      
+  }
+    </style>
+</head>
+<body>
+
+  <!-- navbar -->
+    <div class="container-fluid" id="navbar">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#"><img src="images/favicon.png" alt="icon" style="width: 40px;" id="weather_img"> Weather Website</a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <!-- <span class="navbar-toggler-icon"></span> -->
+                        <img src="images/nav.png" alt="" class="navbar-toggler-icon">
+                      </button>
+
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto mb-2 mb-lg-0" style="margin-left: auto;">
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/weather">Weather Report</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/about">About Us</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- content -->
+    <div class="container-fluid content">
+      <div class="row">
+          <div class="col-md-10 col-12 mx-auto">
+            <div class="row">
+              <div class="col-md-12 col-12 content_right">
+                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/error.jpg" class="w-100" alt="..." id="image1">
+                      <a href="/">
+                        <button class="btn btn-dark btn-lg home">Home Page</button>
+                    </a>
+                    </div>
+                  </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <p>Created by  Sagar Sharma</p>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script> -->
+</body>
+</html>
